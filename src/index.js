@@ -1,7 +1,8 @@
+import "@fortawesome/fontawesome-free/css/all.css";
+import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "@fortawesome/fontawesome-free/css/all.css";
 import { Provider } from "react-redux";
 import store from "./store";
 

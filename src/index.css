@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mySwiper {
+  padding-bottom: 1rem !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 0 22px;
+}
+
+.swiper-button-prev {
+  background-color: #f9ecd1;
+  left: 0 !important;
+}
+
+.swiper-button-next {
+  background-color: #fab6bf;
+  right: 0 !important;
+}
+
+.swiper-button-prev::after {
+  color: #fab6bf;
+  font-size: 1.5rem !important;
+}
+
+.swiper-button-next::after {
+  color: #fff;
+  font-size: 1.5rem !important;
+}
