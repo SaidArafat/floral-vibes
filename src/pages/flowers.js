@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+// import { useDispatch, useSelector } from "react-redux";
 import StatusIndicator from "../components/common/statusIndicator";
-import { fetchFlowers } from "../store/slices/flowerSlice";
+// import { fetchFlowers } from "../store/slices/flowerSlice";
 import Plan from "../components/common/plan";
+import flowers from "./../data/flowers";
 
 const Flowers = () => {
-  const { flowers, isLoading, error } = useSelector((state) => state.flowers);
+  // const { flowers, isLoading, error } = useSelector((state) => state.flowers);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchFlowers());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchFlowers());
+  // }, [dispatch]);
 
   //   <div
   //   key={flower.id}
@@ -31,7 +32,9 @@ const Flowers = () => {
   });
 
   return (
-    <StatusIndicator isLoading={isLoading} error={error}>
+    <StatusIndicator
+    // isLoading={isLoading} error={error}
+    >
       <section className="bg-white p-8">
         <section className="grid gap-2 grid-cols-2 md:grid-cols-3">
           {renderedFlowers}

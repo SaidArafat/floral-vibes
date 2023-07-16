@@ -1,16 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { fetchCartItems } from "../../store/slices/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
+// import { fetchCartItems } from "../../store/slices/cartSlice";
+// import { useDispatch, useSelector } from "react-redux";
+import cart from "./../../data/cart";
 
 const Navbar = () => {
-  const { cart } = useSelector((state) => state.cart);
+  // const { cart } = useSelector((state) => state.cart);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchCartItems());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchCartItems());
+  // }, [dispatch]);
 
   const listRef = useRef();
   const toggleNavList = () => {

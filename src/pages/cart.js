@@ -1,21 +1,23 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchCartItems,
-  // updateQuantity
-} from "../store/slices/cartSlice";
+import React from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import {
+// fetchCartItems,
+// updateQuantity
+// } from "../store/slices/cartSlice";
+
 import Button from "./../components/common/button";
 import StatusIndicator from "./../components/common/statusIndicator";
 import ScheduleDelivery from "../components/cart/scheduleDelivery";
+import cart from "./../data/cart";
 
 const Cart = () => {
-  const { cart, isLoading, error } = useSelector((state) => state.cart);
+  // const { cart, isLoading, error } = useSelector((state) => state.cart);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchCartItems());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchCartItems());
+  // }, [dispatch]);
 
   // console.log(cart);
 
@@ -65,7 +67,9 @@ const Cart = () => {
   const total = cart.reduce((accumulator, item) => accumulator + item.price, 0);
 
   return (
-    <StatusIndicator isLoading={isLoading} error={error}>
+    <StatusIndicator
+    // isLoading={isLoading} error={error}
+    >
       <section className="p-8 pt-4 bg-white">
         <div className="flex flex-col md:flex-row md:space-x-6">
           <section className="w-full">

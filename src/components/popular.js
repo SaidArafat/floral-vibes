@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Button from "./common/button";
 import FilterButton from "./common/filterButton";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchFlowers } from "../store/slices/flowerSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchFlowers } from "../store/slices/flowerSlice";
 import StatusIndicator from "./common/statusIndicator";
-import { addToCart } from "../store/slices/cartSlice";
+// import { addToCart } from "../store/slices/cartSlice";
+import flowers from "./../data/flowers";
 
 const Popular = () => {
-  const { flowers, isLoading, error } = useSelector((state) => state.flowers);
+  // const { flowers, isLoading, error } = useSelector((state) => state.flowers);
 
   const [filter, setFilter] = useState("bouquet");
   const categories = ["bouquet", "romance", "wedding", "summer"];
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchFlowers());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchFlowers());
+  // }, [dispatch]);
 
   const handleFilterSelect = (category) => {
     setFilter(category);
@@ -55,7 +56,7 @@ const Popular = () => {
             primary
             rounded
             icon
-            onClick={() => dispatch(addToCart(flower))}
+            // onClick={() => dispatch(addToCart(flower))}
           >
             <i className="fa-solid fa-cart-shopping"></i>
           </Button>
@@ -65,7 +66,9 @@ const Popular = () => {
   });
 
   return (
-    <StatusIndicator isLoading={isLoading} error={error}>
+    <StatusIndicator
+    // isLoading={isLoading} error={error}
+    >
       <section className="p-8">
         <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
           <h2 className="text-3xl capitalize mb-2 sm:m-0">
